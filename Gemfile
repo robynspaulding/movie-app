@@ -47,3 +47,6 @@ group :development do
 end
 
 gem 'ffaker'
+group :development, :test do
+  gem 'ffaker'
+end
