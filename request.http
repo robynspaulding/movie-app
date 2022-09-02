@@ -1,0 +1,11 @@
+### Movie Index Action
+GET http://localhost:3000/movies.json
+
+### Movie Show Action
+GET http://localhost:3000/movies/1.json
+
+### Actor Index Action
+GET http://localhost:3000/actors.json
+
+### Actor Show Action
+GET http://localhost:3000/actors/1.json
