@@ -4,8 +4,52 @@ GET http://localhost:3000/movies.json
 ### Movie Show Action
 GET http://localhost:3000/movies/1.json
 
+### Movie Create Action
+POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+  "title": "Tolkien",
+  "year": "2019",
+  "plot": "As a young student, J.R.R. Tolkien finds love, friendship and artistic inspiration among a group of fellow outcasts. Their brotherhood soon strengthens as Tolkien weathers the storm of a tumultuous courtship with Edith Bratt and the outbreak of World War I. These early life experiences later inspire the budding author to write the classic fantasy novels The Hobbit and The Lord of the Rings."
+}
+
+### Movie Update Action
+PATCH http://localhost:3000/movies/5.json 
+Content-Type: application/json
+
+{
+   "title": "Home Alone"
+}
+
+### Movie Destroy Action
+DELETE http://localhost:3000/movies/1.json
+
 ### Actor Index Action
 GET http://localhost:3000/actors.json
 
 ### Actor Show Action
 GET http://localhost:3000/actors/1.json
+
+### Actor Create Action
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "first_name": "Emilia",
+  "last_name": "Clark",
+  "known_for": "Game of Thrones"
+}
+
+### Actor Update Action
+PATCH http://localhost:3000/actors/3.json 
+Content-Type: application/json
+
+{
+   "first_name": "Samuel L.",
+  "last_name": "Jackson",
+  "known_for": "All of it, everything, all the movies"
+}
+
+### Actor Destroy Action
+DELETE http://localhost:3000/actors/1.json
