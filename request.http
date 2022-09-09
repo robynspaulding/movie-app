@@ -38,7 +38,9 @@ Content-Type: application/json
 {
   "first_name": "Emilia",
   "last_name": "Clark",
-  "known_for": "Game of Thrones"
+  "known_for": " Daenerys Targaryen in the Game of Thrones series",
+  "age": 30,
+  "gender": "F"
 }
 
 ### Actor Update Action

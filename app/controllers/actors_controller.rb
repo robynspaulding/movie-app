@@ -11,14 +11,18 @@ class ActorsController < ApplicationController
   end
 
   def create
-   actor = Actor.create(
+   actor = Actor.new(
     first_name: params["first_name"],
     last_name: params["last_name"],
     known_for: params["known_for"],
     gender: params["gender"],
     age: params["age"]
    )
-   render json: actor.as_json
+   if actor.save
+   render json: { message: "Actor created successfully!" }
+   else 
+    render json: { errors: actor.errors.full_messages }, status: :unprocessable_entity
+   end
   end
 
   def update
