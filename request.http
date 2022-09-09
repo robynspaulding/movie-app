@@ -44,13 +44,11 @@ Content-Type: application/json
 }
 
 ### Actor Update Action
-PATCH http://localhost:3000/actors/3.json 
+PATCH http://localhost:3000/actors/2.json 
 Content-Type: application/json
 
 {
-   "first_name": "Samuel L.",
-  "last_name": "Jackson",
-  "known_for": "All of it, everything, all the movies"
+   "known_for": "Daenerys Targaryen: Queen of Meereen, Khaleesi of the Great Grass Sea, Mother of Dragons, The Unburnt, Breaker of Chains in the Game of Thrones series"
 }
 
 ### Actor Destroy Action
