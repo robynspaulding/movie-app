@@ -19,8 +19,11 @@ class MoviesController < ApplicationController
      director: params["director"],
      english: params["english"] 
     )
-    movie.save
-    render json: movie.as_json
+    if movie.save
+      render json: { message: "Movie created successfully!" }
+    else 
+     render json: { errors: movie.errors.full_messages }, status: :unprocessable_entity
+    end
   end
  
   def update
@@ -32,8 +35,11 @@ class MoviesController < ApplicationController
     movie.director = params["director"] || movie.director
     movie.english = params["english"] || movie.english
      
-    movie.save
-    render json: movie.as_json
+    if movie.save
+      render json: { message: "Movie updated successfully!" }
+    else 
+     render json: { errors: movie.errors.full_messages }, status: :unprocessable_entity
+    end
   end
  
    def destroy
