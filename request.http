@@ -1,18 +1,25 @@
+@costumer = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjMwMTExMjZ9.4LysS80tHqyoapw-3xD5dBS74IK9KxiVkJBcca9g5yg
+
+@admin = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2NjMwMTM4NDB9.s6w7_3KsUyyTjzKeQz05cmHu1Tecgmgoprsakk6A1_o
+
 ### Movie Index Action
 GET http://localhost:3000/movies.json
+Authorization: Bearer {{costumer}}
 
 ### Movie Show Action
 GET http://localhost:3000/movies/1.json
+Authorization: Bearer {{costumer}}
 
 ### Movie Create Action
 POST http://localhost:3000/movies.json
 Content-Type: application/json
+Authorization: Bearer {{admin}}
 
 {
-  "title": "Tolkien",
-  "year": "2019",
-  "plot": "As a young student, J.R.R. Tolkien finds love, friendship and artistic inspiration among a group of fellow outcasts. Their brotherhood soon strengthens as Tolkien weathers the storm of a tumultuous courtship with Edith Bratt and the outbreak of World War I. These early life experiences later inspire the budding author to write the classic fantasy novels The Hobbit and The Lord of the Rings.",
-  "director": "Dome Karukoski",
+  "title": "Inside Out",
+  "year": "2015",
+  "plot": "An inner look at what goes on in the mind of a young person dealing with new challenges, Joy, Saddness, Anger, Fear and Disgust play staring roles in Riely's desicion making.",
+  "director": "Pete Docter",
   "english": true
 }
 
@@ -55,3 +62,25 @@ Content-Type: application/json
 
 ### Actor Destroy Action
 DELETE http://localhost:3000/actors/1.json
+
+### User Create Action
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "adminTest2",
+  "email": "adminTest2@test.com",
+  "password": "password",
+  "password_confirmation": "password",
+  "admin": true
+}
+
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "adminTest2@test.com",
+  "password": "password"
+}
