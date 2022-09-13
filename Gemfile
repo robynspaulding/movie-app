@@ -50,4 +50,5 @@ gem 'ffaker'
 group :development, :test do
   gem 'ffaker'
   gem 'jwt'
+  gem 'active_model_serializers'
 end
