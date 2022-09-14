@@ -13,7 +13,7 @@ Authorization: Bearer {{costumer}}
 ### Movie Create Action
 POST http://localhost:3000/movies.json
 Content-Type: application/json
-Authorization: Bearer {{admin}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2NjMyMTEzNTl9.6nlPkZzHzfSJMlz93i0swwyd3rQya-uVQ5e9qbRiXXM
 
 {
   "title": "Inside Out",
@@ -82,4 +82,14 @@ Content-Type: application/json
 {
   "email": "adminTest2@test.com",
   "password": "password"
+}
+
+
+### MovieGenres Create Action
+POST http://localhost:3000/movie_genres.json
+Content-Type: Application/json
+
+{
+  "movie_id": 4,
+  "genre_id": 1
 }
